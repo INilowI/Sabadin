@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sabadin</title>
+    <style>
+        body {
+            background-color: #ff0000;
+            font-family: Arial, sans-serif
+        }
+        html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        .container {                  
+            width: 200px;
+            margin: 0 auto;
+            padding: 90px;
+            background-color: #ff0000;
+            text-align: center;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #000000;
+            box-shadow: 0px 0px 50px #000000;       
+        }
+        
+        h1 {
+            color: #000000;           
+            margin-top: 1px; 
+        }
+        
+        #no {
+            position: absolute;
+            top: 55%;
+            left: 55%;          
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #000000;
+            background-color: #8b8a8a;
+            box-shadow: 0px 0px 10px #000000;
+            padding: 10px;
+        }
+        
+        #yes {
+            position: absolute;
+            left: 43%;
+            top: 50%;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #8b8a8a;
+            color: #000000;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 24px;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #000000;
+            box-shadow: 0px 0px 10px #000000;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>sábado tem?</h1>
+        <a href="https://www.youtube.com/watch?v=s5870NUUtfY" id="yes">Sim</a>
+        <span id="no">Não</span>      
+    </div>
+
+    <script>
+        var no = document.getElementById('no');
+        no.addEventListener('mouseover', function() {
+            var leftPos = Math.random() * (window.innerWidth - this.clientWidth);
+            var topPos = Math.random() * (window.innerHeight - this.clientHeight);
+            no.style.left = leftPos + 'px';
+            no.style.top = topPos + 'px';
+        });
+    </script>
+</body>
+</html>
